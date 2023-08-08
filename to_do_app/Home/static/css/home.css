@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 70%;
+    border: solid rgb(76, 76, 253) 5px;
+    border-radius: 23px;
+    background-color: grey;
+    margin: 140px auto;
+    padding: 40px;
+}
+.title{
+    text-align: center;
+    color: white;
+    background-color: blue;
+    padding: 6px;
+    border-radius: 23px;
+}
+
+.input-container{
+    background-color: blue;
+    margin: 16px 0;
+    padding: 10px;
+    border-radius: 23px;
+
+}
+.input{
+    border: solid grey 3px;
+    padding: 7px;
+    background-color: grey;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin: 6px auto;
+    border-radius: 23px;
+    width: 80%;
+
+}
+.add-btn{
+
+    width: 15%;
+    border: solid grey 3px;
+    padding: 7px;
+    background-color: grey;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 23px;
+    color: white;
+    
+}
+
+
+.task-container{
+    background-color: blue;
+    width: 80%;
+    padding: 13px;
+    border-radius: 23px;
+    margin: 10px auto;
+}
+
+.edit-btn, .del-btn{
+    border-radius: 23px;
+    padding: 8px 14px;
+    margin-bottom: 7px;
+}
+
+.task-title{
+    width: 70%;
+    background-color: green;
+    display: inline-flex;
+    padding: 8px 18px;
+    border-radius: 23px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 7px;
+}

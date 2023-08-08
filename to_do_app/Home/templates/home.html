@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">To Do App</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-container">
+                    <input class="input" type="text" placeholder="add task" name="title" />
+                    <input class="input" type="date" placeholder="add task" name="date" />
+
+                    <button type="submit" class="add-btn">Add</button>
+                </div>
+            </form>
+            <div class="task-container">
+                {% for ts in tasks %}
+                <div class="task-title">{{ts.title}}</div>
+                <a href="{% url 'delete' ts.id %}"><button class="del-btn">Delete</button></a>
+                <button class="edit-btn">Edit</button>
+                <br />
+
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
