@@ -27,3 +27,23 @@ def Delete(request,task_id):
 
 
     return render(request,'delete.html')
+
+
+def Update(request,task_id):
+
+
+    task = Tasks.objects.get(id = task_id) 
+
+
+
+
+    if request.method == "POST":
+        up_title = request.POST['title']
+        date = request.POST['date']
+
+        Tasks.objects.filter(id=task_id).update(title = up_title, date_created = date)
+
+        
+        return redirect('/')
+        
+    return render(request, 'update.html',{'task':task})

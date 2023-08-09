@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete page</title>
-</head>
-<body>
+{% extends 'base.html' %}{% block title %}Delete page{% endblock %}{% block content %}
 
-    <form method="post">
+
+    <form class="del-page-container" method="post">
         {% csrf_token %}
-        <p>Are you sure to delete ?</p>
-        <button type="submit">Delete</button>
+        <span class="message">Are you sure want to delete ?</span>
+        <button class="delete" type="submit">Delete</button>
     </form>
     
-</body>
-</html>
+{% endblock %}
